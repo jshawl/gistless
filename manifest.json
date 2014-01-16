@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "gistless",
+  "description": "Hides Gists from your GitHub activity feed",
+  "version": "0.0.1",
+  "homepage_url": "https://github.com/jshawl/gistless",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": ["gistless.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
